@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>angular多模块种子</title>
+  <link rel="stylesheet" href="css/bootstrap.css"/>
+  <script src="js/lib/jquery-1.8.0.js"></script>
+  <script src="js/lib/bootstrap.js"></script>
+  <script src="js/lib/angular.js"></script>
+  <script src="js/lib/ocLazyLoad.min.js"></script>
+  <script src="js/lib/lodash.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services/services.js"></script>
+  <script src="js/controllers/controllers.js"></script>
+  <script src="js/filters/filters.js"></script>
+  <script src="js/directives/directives.js"></script>
+  <script src="js/models/login/services/services.js"></script>
+  <script src="js/models/login/controllers/controllers.js"></script>
+  <script src="js/models/login/filters/filters.js"></script>
+  <script src="js/models/login/directives/directives.js"></script>
+</head>
+<body ng-controller="indexController">
+  <span>
+    <a style="cursor: pointer;" ng-click="loadPage(1)">页面一</a>
+  <span>
+  <span>
+    <a style="cursor: pointer;" ng-click="loadPage(2)">页面二</a>
+  <span>
+  <span>
+    <a style="cursor: pointer;" ng-click="loadPage(3)">页面三</a>
+  <span>
+  <div style="margin: 100px 20px 20px;">
+    以下是动态获得内嵌页面
+    <div style="border: 1px solid #ccc; height: 400px;"></div>
+  </div>
+    
+</body>
+</html>
