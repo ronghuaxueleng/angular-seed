@@ -7,10 +7,15 @@ var module = angular.module('login.controllers',[]);
 
 
 module.controller('LoginController', function($scope, $rootScope, AUTH_EVENTS, AuthService) {
-	$scope.credentials = {
+  $scope.credentials = {
     username: 'admin',
     password: 'admin'
   };
+  
+  $scope.setCurrentUser = function (user) {
+    $scope.currentUser = user;
+  };
+
   $scope.login = function (credentials) {
     AuthService.login(credentials).then(function (user) {
       $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);

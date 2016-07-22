@@ -8,12 +8,15 @@ angular.module('login.services', [])
   var authService = {};
  
   authService.login = function (credentials) {
-    return $http
-      .post('/login', credentials)
-      .then(function (res) {
-        Session.create(res.data.id, res.data.user.id,res.data.user.role);
-        return res.data.user;
-      });
+    var dtd = $.Deferred();
+    var user = {
+        'id':1,
+        'user':'admin',
+        'role':'管理员'
+    };
+    Session.create(1, user.id,user.role);
+    dtd.resolve(user);
+    return dtd.promise();
   };
  
   authService.isAuthenticated = function () {
