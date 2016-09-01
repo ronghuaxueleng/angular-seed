@@ -1,0 +1,6 @@
+<ul class="nav nav-pills nav-stacked nav-level-1" ng-repeat="item in data">
+  <li ui-sref-active="active" title="{{item.progress !== 100?'浠嶅湪寮€鍙戜腑':''}}">
+    <a ui-sref="{{item.state}}">{{item.label}}
+    </a>
+  </li>
+</ul>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>angularjs项目基本结构（使用requireJs）</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="libs/require.js"></script>
+    <script src="apps/require.config.js"></script>
+</head>
+
+<body style="background:#fff">
+    <div class="main-content">
+        <div class="row">
+            <div class="col-md-2" ng-controller="controller1">
+              <div class="form-group">
+                <label class="control-label">controller1</label>
+                <input class="form-control" placeholder="controller1" ng-model="data" type="text">
+              </div>
+              <div>{{data}}</div>
+            </div>
+            <div class="col-md-2" ng-controller="controller2">
+              <div class="form-group">
+                <label class="control-label">controller2</label>
+                <input class="form-control" placeholder="controller2" ng-model="data" type="text">
+              </div>
+              <div>{{data}}</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <directive1></directive1>
+            </div>
+            <div class="col-md-2">
+                <directive2></directive2>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
