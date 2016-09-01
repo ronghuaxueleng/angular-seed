@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>angularjs项目基本结构（不使用requireJs）</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="libs/angular.min.js"></script>
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/bootstrap.min.js"></script>
+    <script src="libs/angular-ui-router.min.js"></script>
+    <script src="apps/app.js"></script>
+    <script src="apps/controllers/controller1.js"></script>
+    <script src="apps/controllers/controller2.js"></script>
+    <script src="apps/directives/nav.js"></script>
+    <script src="apps/services/service1.js"></script>
+    <script src="apps/services/service2.js"></script>
+    <script src="apps/configs/config.js"></script>
+    <script src="apps/configs/nav-data.js"></script>
+    <script src="apps/router.js"></script>
+</head>
+
+<body style="background:#fff">
+    <div class="main-content">
+        <div class="row">
+            <div class="col-md-2">
+                <app-nav></app-nav>
+            </div>
+            <div class="col-md-2" ng-controller="controller1">
+              <div ui-view>正在加载，请稍候……</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
